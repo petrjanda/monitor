@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "rddd-monitor"
-  s.version     = '0.1.2'
+  s.version     = '0.1.3'
   s.authors     = ["Petr Janda"]
   s.email       = ["petr@ngneers.com"]
   s.homepage    = ""
