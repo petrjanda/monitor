@@ -18,4 +18,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
+  s.add_dependency 'sinatra'
+  s.add_dependency 'rddd'
 end
