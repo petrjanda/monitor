@@ -1,7 +1,5 @@
 require 'json'
-require 'couchrest'
 require 'singleton'
-require 'configuration'
 
 class InMemoryStrages
   include Singleton
