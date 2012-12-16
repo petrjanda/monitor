@@ -43,29 +43,9 @@ RSpec::Matchers.define :have_finder do |method|
   end
 end
 
-
 RSpec::Matchers.define :have_accessor do |method|
   match do |subject|
     subject.respond_to?(method) && \
     subject.respond_to?("#{method}=")
   end
-end
-
-def stub_as(responder_class, methods = {})
-  responder = create_responder(responder_class)
-  stub(responder_class.name.to_s, methods).responds_like(responder)
-end
-
-def create_responder(responder_class)
-  list = case responder_class.name
-  when 'Event' then []
-
-  else raise "Responder '#{responder_class.name}' not defined yet!"
-  end
-
-  responder_class.new(*create_args(list))
-end
-
-def create_args(list)
-  list.map {|arg| stub(arg.to_s) }
 end
